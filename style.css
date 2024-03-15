@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+:root {
+    font-size: 62,5%;
+    --color-base-white: #ffffff;     /*variáveis para utilização no css, para não ter q especificar toda hr, basta definir a estilização para a própria variável e depois usar ela no documento*/
+    --color-base-gray-500: #202024;
+    --color-base-gray-900: #121214;
+    --color-base-blue-900: #065E7C;
+    --color-base-blue-800: #308199;
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-base-white); /*usando a variável*/
+  color: var(--color-base-gray-900);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+#app {
+  display: grid;
+  grid-template-areas: max-content 1fr max-content;
+  height: 100vh;
+}
+
+.container {
+  padding: 0 12.3rem;
+  width: min(80.3rem, 100%);
+}
+
+.container p {
+  width: 80.3rem;
+  margin-bottom: 3.0rem;
+}
+
+.container h1 {
+  margin-right: 20rem;
+  margin-bottom: 3.0rem;
+}
+
+.align {
+  margin-left: 300px;
+}
+
+.flex {
+  display: flex;
+}
+
+.container button {
+  border: 0;
+  background: var(--color-base-white);
+  padding: 0 1.2rem;
+  margin-bottom: 3.0rem;
+}
+
+.like {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.cat {
+  width: 80.3rem;
+  height: 40.3rem;
+  object-fit: cover; /*cobrir espaços pra imagem não ficar destorcida com o redimensionamneto*/
+  margin-bottom: 3.2rem;
+}
+
+header, nav {
+  display: flex;
+  align-items: center;
+  padding: 0 4.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var (var(--color-base-blue-900))
+}
+
+.logo {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+header form {
+  flex: 1;
+}
+
+header {
+  background-color: var(--color-base-blue-900);
+  height: 7.2rem;
+  margin-bottom: 3.0rem;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  
+  padding: 1.6rem;
+
+  background-color: var(--color-base-blue-800);
+  border: 0;
+  border-radius: 1rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  
+  opacity: 0.56;
+  color: var(--color-base-white)
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover; /*cobrir espaços pra imagem não ficar destorcida com o redimensionamneto*/
+  border-radius: 50%;
+  margin-right: 4.2rem;
+  margin-left: 7.8rem;
+}
+
+.sidebar h1, figure {
+  margin-bottom: 3.0rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 2.0rem;
+  padding: 0 18.5rem;
+}
+
+
+.item {
+  background-color: var(--color-base-white);
+  border-radius: .8rem;
+}
+
+img {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-delay: 0;
+  transition-timing-function: ease-in-out;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);/*faz imagem dar uma clareada, ao passar o mouse*/
+  transform: scale(1.1);/*faz imagem dar uma aumentadinha, ao passar o mouse*/
+}
+
+
+footer p {
+  text-align: center;
+  color: var(--color-base-white);
+  padding: 2.6rem;
+  font-weight: 600;
+  background-color: var(--color-base-blue-900);
+}
+
+header {
+  --startY: -100%;
+  animation: move .2s;
+}
+
+footer {
+  --startY: 100%;
+  animation: move .2s;
+}
